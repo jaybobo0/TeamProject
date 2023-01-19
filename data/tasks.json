@@ -1,0 +1,28 @@
+[
+  {
+	"uid": 2001,
+	"userUID": 101,
+	"dateCreate": "2023-01-19",
+	"dateDeadline": "2023-01-25",
+	"dateComplete": "2023-01-22",
+	"title": "Build To Do Project",
+	"description": "You and a partner will develop a Phase One \"To-Do\" Task Management Application focusing on functionality over form. The app will use Bootstrap, HTML/CSS, JavaScript, PHP, and JSON. ",
+	"status": "created",
+	"reward": 1.5,
+	"timeNeeded": 120,
+	"categories": "home work"
+  }, 
+  {
+	"uid": 2002,
+	"userUID": 101,
+	"dateCreate": "2023-01-20",
+	"dateDeadline": "2023-01-30",
+	"dateComplete": "2023-02-01",
+	"title": "Present To Class",
+	"description": "Present your todo project To Class",
+	"status": "created",
+	"reward": 20.5,
+	"timeNeeded": 130,
+	"categories": "project"
+  }
+]
