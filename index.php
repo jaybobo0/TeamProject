@@ -15,60 +15,42 @@
         <!-- Header-->
         <header class="py-5">
             <div class="container px-lg-5">
-                <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
+                <div class="p-4 p-lg-5 bg-light rounded-3">
                     <div class="m-4 m-lg-5">
-                        <h1 class="display-5 fw-bold">A warm welcome!</h1>
+                        <h1 class=" text-center display-5 fw-bold">A warm welcome!</h1>
 
                             <!-- form -->
                       
                         <form class="row g-3">
                           <div class="col-md-6">
-                            <label for="inputEmail4" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="inputEmail4">
+                            <label for="inputEmail4" class="form-label">Title</label>
+                            <input type="email" class="form-control" name="title">
                           </div>
                           <div class="col-md-6">
-                            <label for="inputPassword4" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="inputPassword4">
+                            <label for="inputPassword4" class="form-label">Categories</label>
+                            <input type="password" class="form-control" name="categories">
                           </div>
                           <div class="col-12">
-                            <label for="inputAddress" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                            <label for="inputAddress" class="form-label">Reward</label>
+                            <input type="text" class="form-control" name="reward" >
                           </div>
                           <div class="col-12">
-                            <label for="inputAddress2" class="form-label">Address 2</label>
-                            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                            <label for="inputAddress2" class="form-label">Description</label>
+                            <input type="text" class="form-control" name="description">
                           </div>
-                          <div class="col-md-6">
-                            <label for="inputCity" class="form-label">City</label>
-                            <input type="text" class="form-control" id="inputCity">
-                          </div>
-                          <div class="col-md-4">
-                            <label for="inputState" class="form-label">State</label>
-                            <select id="inputState" class="form-select">
-                              <option selected>Choose...</option>
-                              <option>...</option>
-                            </select>
-                          </div>
-                          <div class="col-md-2">
-                            <label for="inputZip" class="form-label">Zip</label>
-                            <input type="text" class="form-control" id="inputZip">
-                          </div>
+                         
                           <div class="col-12">
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" id="gridCheck">
-                              <label class="form-check-label" for="gridCheck">
-                                Check me out
-                              </label>
-                            </div>
+                            <label for="inputAddress2" class="form-label">TimeNeeded</label>
+                            <input type="text" class="form-control" name="timeNeeded">
                           </div>
                           <div class="col-12">
                             <button type="submit" class="btn btn-primary">Sign in</button>
                           </div>
-                        </form>
+                        </form> 
                         <!-- form -->
 
                       
-                        <a class="btn btn-primary btn-lg" href="#!">Call to action</a>
+                      
                     </div>
                 </div>
             </div>
