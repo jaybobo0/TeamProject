@@ -20,27 +20,27 @@
                         <h1 class=" text-center display-5 fw-bold">A warm welcome!</h1>
 
                             <!-- form -->
-                      
-                        <form class="row g-3">
+
+                        <form class="row g-3" action="/redirects/task.php">
                           <div class="col-md-6">
-                            <label for="inputEmail4" class="form-label">Title</label>
-                            <input type="email" class="form-control" name="title">
+                            <label  class="form-label">Title</label>
+                            <input type="text" class="form-control" name="title">
                           </div>
                           <div class="col-md-6">
-                            <label for="inputPassword4" class="form-label">Categories</label>
-                            <input type="password" class="form-control" name="categories">
+                            <label  class="form-label">Categories</label>
+                            <input type="text" class="form-control" name="categories">
                           </div>
                           <div class="col-12">
-                            <label for="inputAddress" class="form-label">Reward</label>
+                            <label  class="form-label">Reward</label>
                             <input type="text" class="form-control" name="reward" >
                           </div>
                           <div class="col-12">
-                            <label for="inputAddress2" class="form-label">Description</label>
+                            <label  class="form-label">Description</label>
                             <input type="text" class="form-control" name="description">
                           </div>
                          
                           <div class="col-12">
-                            <label for="inputAddress2" class="form-label">TimeNeeded</label>
+                            <label  class="form-label">TimeNeeded</label>
                             <input type="text" class="form-control" name="timeNeeded">
                           </div>
                           <div class="col-12">
