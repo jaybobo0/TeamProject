@@ -12,10 +12,10 @@
 
 
 $_SESSION["form"]["title"] = $_POST['title'];
-$_SESSION["form"]["last-name"] = $_POST['last-name'];
-$_SESSION["form"]["email"] = $_POST['email'];
-$_SESSION["form"]["phone-number"] = $_POST['phone-number'];
-$_SESSION["form"]["relationship-status"] = $_POST['relationship-status'];
+$_SESSION["form"]["categories"] = $_POST['categories'];
+$_SESSION["form"]["reward"] = $_POST['reward'];
+$_SESSION["form"]["description"] = $_POST['description'];
+$_SESSION["form"]["timeNeeded"] = $_POST['timeNeeded'];
 
 
 
