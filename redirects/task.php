@@ -18,11 +18,28 @@ $_SESSION["form"]["description"] = $_POST['description'];
 $_SESSION["form"]["timeNeeded"] = $_POST['timeNeeded'];
 
 
+// $newFormData = array(
+//            "title" => $_SESSION["form"]["title"],
+//            "categories" => $_SESSION["form"]["categories"],
+//            "reward" => $_SESSION["form"]["reward"],
+//            "description" => $_SESSION["form"]["description"],
+//            "timeNeeded" => $_SESSION["form"]["timeNeeded"]
+// );
+
+// echo $newFormData;
+
+
+// array_push($tasksData, $newFormData);
+
+// $jsonData = json_encode($tasksData, JSON_PRETTY_PRINT);
+
+echo $_SESSION["form"]["title"];
+
 
 
 
   echo '<pre>';
-  var_dump($tasksData);
+  var_dump($jsonData);
   echo '</pre>';
 
 
