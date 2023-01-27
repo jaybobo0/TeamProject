@@ -24,7 +24,7 @@
                         <form class="row g-3" action="/redirects/task.php">
                           <div class="col-md-6">
                             <label  class="form-label">Title</label>
-                            <input type="text" class="form-control" name="title">
+                            <input type="text" name="title">
                           </div>
                           <div class="col-md-6">
                             <label  class="form-label">Categories</label>
@@ -44,7 +44,7 @@
                             <input type="text" class="form-control" name="timeNeeded">
                           </div>
                           <div class="col-12">
-                            <button type="submit" class="btn btn-primary">Sign in</button>
+                            <center><button type="submit" class="btn btn-primary">Sign in</button></center>
                           </div>
                         </form> 
                         <!-- form -->

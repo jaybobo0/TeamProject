@@ -12,17 +12,34 @@
 
 
 $_SESSION["form"]["title"] = $_POST['title'];
-$_SESSION["form"]["last-name"] = $_POST['last-name'];
-$_SESSION["form"]["email"] = $_POST['email'];
-$_SESSION["form"]["phone-number"] = $_POST['phone-number'];
-$_SESSION["form"]["relationship-status"] = $_POST['relationship-status'];
+$_SESSION["form"]["categories"] = $_POST['categories'];
+$_SESSION["form"]["reward"] = $_POST['reward'];
+$_SESSION["form"]["description"] = $_POST['description'];
+$_SESSION["form"]["timeNeeded"] = $_POST['timeNeeded'];
 
+
+// $newFormData = array(
+//            "title" => $_SESSION["form"]["title"],
+//            "categories" => $_SESSION["form"]["categories"],
+//            "reward" => $_SESSION["form"]["reward"],
+//            "description" => $_SESSION["form"]["description"],
+//            "timeNeeded" => $_SESSION["form"]["timeNeeded"]
+// );
+
+// echo $newFormData;
+
+
+// array_push($tasksData, $newFormData);
+
+// $jsonData = json_encode($tasksData, JSON_PRETTY_PRINT);
+
+echo $_SESSION["form"]["title"];
 
 
 
 
   echo '<pre>';
-  var_dump($tasksData);
+  var_dump($jsonData);
   echo '</pre>';
 
 
