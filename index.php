@@ -21,10 +21,10 @@
 
                             <!-- form -->
 
-                        <form class="row g-3" action="/redirects/task.php">
+                        <form class="row g-3" action="/redirects/task.php" method="post">
                           <div class="col-md-6">
                             <label  class="form-label">Title</label>
-                            <input type="text" name="title">
+                            <input type="text" name="title" class="form-control">
                           </div>
                           <div class="col-md-6">
                             <label  class="form-label">Categories</label>
