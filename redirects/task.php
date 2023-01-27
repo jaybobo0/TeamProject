@@ -18,32 +18,42 @@ $_SESSION["form"]["description"] = $_POST['description'];
 $_SESSION["form"]["timeNeeded"] = $_POST['timeNeeded'];
 
 
-// $newFormData = array(
-//            "title" => $_SESSION["form"]["title"],
-//            "categories" => $_SESSION["form"]["categories"],
-//            "reward" => $_SESSION["form"]["reward"],
-//            "description" => $_SESSION["form"]["description"],
-//            "timeNeeded" => $_SESSION["form"]["timeNeeded"]
-// );
+$date = date_create($_POST['dateDeadline']);
+$deadlineDateReformated = date_format($date, "Y/m/d");
 
-// echo $newFormData;
+$newFormData = array(
+          "uid"=> "XXXXX",
+          "userUID"=> $_POST['user'],
+          "dateDeadline"=> "2/20/23",
+          "user"=> "new user",
+          "dateCreate"=> date("Y m d"),
+          "dateComplete"=> "",
+          "status"=> "XXXXX",
+          "title" => $_SESSION["form"]["title"],
+          "categories" => $_SESSION["form"]["categories"],
+          "reward" => $_SESSION["form"]["reward"],
+          "description" => $_SESSION["form"]["description"],
+          "timeNeeded" => $_SESSION["form"]["timeNeeded"]
+);
 
 
-// array_push($tasksData, $newFormData);
 
-// $jsonData = json_encode($tasksData, JSON_PRETTY_PRINT);
 
-echo $_SESSION["form"]["title"];
+array_push($tasksData, $newFormData);
+
+$tasksDataAsJSON = json_encode($tasksData, JSON_PRETTY_PRINT);
+
+
 
 
 
 
   echo '<pre>';
-  var_dump($jsonData);
+  var_dump($tasksDataAsJSON);
   echo '</pre>';
 
 
-
+file_put_contents($_SERVER['DOCUMENT_ROOT'].'/data/tasks.json', $tasksDataAsJSON);
 
 
 ?>
