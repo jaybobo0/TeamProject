@@ -21,8 +21,17 @@ $_SESSION["form"]["timeNeeded"] = $_POST['timeNeeded'];
 $date = date_create($_POST['dateDeadline']);
 $deadlineDateReformated = date_format($date, "Y/m/d");
 
+//Create a new LARGEST UID based on existing UIDs in an array. 
+$largest_uid = 0;
+foreach ($tasksData as $item) {
+    if ($item['uid'] > $largest_uid) {
+        $largest_uid = $item['uid'];
+        $newUID = $largest_uid+1;
+    }
+}
+
 $newFormData = array(
-          "uid"=> "XXXXX",
+          "uid"=> $newUID,
           "userUID"=> $_POST['user'],
           "dateDeadline"=> "2/20/23",
           "user"=> "new user",
