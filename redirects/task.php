@@ -1,23 +1,7 @@
-<?php $_SERVER['DOCUMENT_ROOT'];
+<?php /*1st Line on every webpage.*/ include $_SERVER['DOCUMENT_ROOT'].'/functions.php'; 
 
 
-
-  // Get data from json file.
-  $jsonTasks = file_get_contents($_SERVER['DOCUMENT_ROOT']."/data/tasks.json"); 
-  $jsonUsers = file_get_contents($_SERVER['DOCUMENT_ROOT']."/data/users.json"); 
-  // Convert json data to PHP array.
-  $tasksData =  json_decode($jsonTasks, TRUE);   
-  $usersData =  json_decode($jsonUsers, TRUE);   
-
-
-
-$_SESSION["form"]["title"] = $_POST['title'];
-$_SESSION["form"]["categories"] = $_POST['categories'];
-$_SESSION["form"]["reward"] = $_POST['reward'];
-$_SESSION["form"]["description"] = $_POST['description'];
-$_SESSION["form"]["timeNeeded"] = $_POST['timeNeeded'];
-
-
+//format deadline
 $date = date_create($_POST['dateDeadline']);
 $deadlineDateReformated = date_format($date, "Y/m/d");
 
@@ -29,7 +13,7 @@ foreach ($tasksData as $item) {
         $newUID = $largest_uid+1;
     }
 }
-
+//turn data into php array
 $newFormData = array(
           "uid"=> $newUID,
           "userUID"=> $_POST['user'],
@@ -38,30 +22,30 @@ $newFormData = array(
           "dateCreate"=> date("Y m d"),
           "dateComplete"=> "",
           "status"=> "XXXXX",
-          "title" => $_SESSION["form"]["title"],
-          "categories" => $_SESSION["form"]["categories"],
-          "reward" => $_SESSION["form"]["reward"],
-          "description" => $_SESSION["form"]["description"],
-          "timeNeeded" => $_SESSION["form"]["timeNeeded"]
+          "title" => $_POST["title"],
+          "categories" => $_POST["categories"],
+          "reward" => $_POST['reward'],
+          "description" => $_POST['description'],
+          "timeNeeded" => $_POST['timeNeeded']
 );
 
 
 
-
+//push newform data (The php array we just made) into tasksData (the json data that was converted into a php array)
 array_push($tasksData, $newFormData);
-
+//encode tasksData back into json
 $tasksDataAsJSON = json_encode($tasksData, JSON_PRETTY_PRINT);
 
 
 
 
 
-
+//encho out taksData
   echo '<pre>';
   var_dump($tasksDataAsJSON);
   echo '</pre>';
 
-
+//put the data into json
 file_put_contents($_SERVER['DOCUMENT_ROOT'].'/data/tasks.json', $tasksDataAsJSON);
 
 
