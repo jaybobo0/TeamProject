@@ -41,12 +41,14 @@ $tasksDataAsJSON = json_encode($tasksData, JSON_PRETTY_PRINT);
 
 
 //encho out taksData
-  echo '<pre>';
-  var_dump($tasksDataAsJSON);
-  echo '</pre>';
+  // echo '<pre>';
+  // var_dump($tasksDataAsJSON);
+  // echo '</pre>';
 
 //put the data into json
-// file_put_contents($_SERVER['DOCUMENT_ROOT'].'/data/tasks.json', $tasksDataAsJSON);
+file_put_contents($_SERVER['DOCUMENT_ROOT'].'/data/tasks.json', $tasksDataAsJSON);
 
+//send to user index.php
+header('Location: /index.php');
 
 ?>
