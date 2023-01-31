@@ -46,7 +46,7 @@ $tasksDataAsJSON = json_encode($tasksData, JSON_PRETTY_PRINT);
   echo '</pre>';
 
 //put the data into json
-file_put_contents($_SERVER['DOCUMENT_ROOT'].'/data/tasks.json', $tasksDataAsJSON);
+// file_put_contents($_SERVER['DOCUMENT_ROOT'].'/data/tasks.json', $tasksDataAsJSON);
 
 
 ?>
