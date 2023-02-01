@@ -18,7 +18,6 @@ $newFormData = array(
           "uid"=> $newUID,
           "userUID"=> $_POST['user'],
           "dateDeadline"=> "2/20/23",
-          "user"=> "new user",
           "dateCreate"=> date("Y-m-d"),
           "dateComplete"=> "",
           "status"=> "XXXXX",

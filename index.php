@@ -34,9 +34,25 @@
                             <label  class="form-label">Reward</label>
                             <input type="text" class="form-control" name="reward" >
                           </div>
-                          <div class="col-12">
+                          <div class="col-6">
                             <label  class="form-label">Description</label>
                             <input type="text" class="form-control" name="description">
+                          </div>
+                          
+                          <div class="col-6"> 
+                            <label  class="form-label">User</label>
+                            <select  id='user' name='user' class="form-select">
+                            <option value='0' selected> Choose a user </option>
+                            
+                            <?php 
+
+                            foreach ($usersData as $user){
+                              echo '<option value="'.  $user['uid']. '">'.$user['fName'].' '.$user['lName']. '</option>'; 
+
+                            }
+
+?>
+</select>
                           </div>
                          
                           <div class="col-12">

@@ -38,19 +38,5 @@
         "reward": "500$",
         "description": "Simple",
         "timeNeeded": "30 mins"
-    },
-    {
-        "uid": 2004,
-        "userUID": null,
-        "dateDeadline": "2\/20\/23",
-        "user": "new user",
-        "dateCreate": "2023-01-31",
-        "dateComplete": "",
-        "status": "XXXXX",
-        "title": "tie",
-        "categories": "tie",
-        "reward": "bd",
-        "description": "fb",
-        "timeNeeded": "off"
     }
 ]
