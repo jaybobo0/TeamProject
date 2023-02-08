@@ -9,15 +9,15 @@
   foreach ($tasksData as $item1) {
       foreach ($usersData as $item2) {
           if ($item1["Name"] == $item2["Name"]) {
-              unset($item2["UID"]);
+              unset($item2["uid"]);
               $result[] = array_merge($item1, $item2);
           }
       }
   }
   
-  // echo '<pre>';
-  // var_dump($result);
-  // echo '</pre>';
+  echo '<pre>';
+  var_dump($result);
+  echo '</pre>';
 
   ?>
 
