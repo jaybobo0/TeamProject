@@ -14,9 +14,9 @@
       }
   }
   
-  echo '<pre>';
-  var_dump($result);
-  echo '</pre>';
+  // echo '<pre>';
+  // var_dump($result);
+  // echo '</pre>';
 
   ?>
 
