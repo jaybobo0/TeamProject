@@ -4,11 +4,10 @@
   <?php
 
   
-  $result = array();
   
   foreach ($tasksData as $item1) {
       foreach ($usersData as $item2) {
-          if ($item1["Name"] == $item2["Name"]) {
+          if ($item1["userUID"] == $item2["uid"]) {
               unset($item2["uid"]);
               $result[] = array_merge($item1, $item2);
           }
