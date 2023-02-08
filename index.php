@@ -31,9 +31,17 @@
                             <label  class="form-label">Categories</label>
                             <input type="text" class="form-control" name="categories">
                           </div>
-                          <div class="col-12">
+                          <div class="col-6">
                             <label  class="form-label">Reward</label>
                             <input type="text" class="form-control" name="reward" >
+                          </div>
+                          <div class="col-6">
+                            <label  class="form-label">Date</label>
+                              <br>
+                              <input type="date" id="start" name="trip-start"
+                                     value="2018-07-22"
+                                     min="2018-01-01" max="2018-12-31">
+
                           </div>
                           <div class="col-6">
                             <label  class="form-label">Description</label>
