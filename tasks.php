@@ -1,4 +1,31 @@
 <?php /*1st Line on every webpage.*/ include $_SERVER['DOCUMENT_ROOT'].'/functions.php'; ?>
+
+<!-- Get User Names from UID -->
+  <?php
+
+  
+  $result = array();
+  
+  foreach ($tasksData as $item1) {
+      foreach ($usersData as $item2) {
+          if ($item1["Name"] == $item2["Name"]) {
+              unset($item2["UID"]);
+              $result[] = array_merge($item1, $item2);
+          }
+      }
+  }
+  
+  // echo '<pre>';
+  // var_dump($result);
+  // echo '</pre>';
+
+  ?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -49,14 +76,14 @@
                         </thead>
                         <tbody>
                                             <?php 
-                                              foreach($tasksData as $key => $task){
+                                              foreach($result as $key => $task){
                                                 echo '<tr>
                                                         <th scope="row">1</th>
-                                                        <td>'.$task['userUID'].'</td>
-                                                        <td>'.$task['categories'].'</td>
-                                                        <td>@mdo</td>
-                                                        <td>@mdo</td>
-                                                        <td>@mdo</td>
+                                                        <td>'.$task['fName'].' '.$task['lName'].'</td>
+                                                          <td>'.$task['categories'].'</td>
+                                                        <td>'.$task['dateDeadline'].'</td>
+                                                        <td>'.$task['title'].'</td>
+                                                        <td>Value</td>
                                                       </tr>';
                                               }
                                               
