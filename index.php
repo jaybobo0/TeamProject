@@ -38,9 +38,9 @@
                           <div class="col-6">
                             <label  class="form-label">Date</label>
                               <br>
-                              <input type="date" id="start" name="trip-start"
+                              <input type="date" id="start" class="form-control" name="dateDeadline"
                                      value="2018-07-22"
-                                     min="2018-01-01" max="2018-12-31">
+                                     min="2018-01-01" max="2025-12-31">
 
                           </div>
                           <div class="col-6">

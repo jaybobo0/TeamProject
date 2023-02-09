@@ -14,7 +14,7 @@
     },
     {
         "uid": 2002,
-        "userUID": 102,
+        "userUID": 101,
         "dateCreate": "2023-01-20",
         "dateDeadline": "2023-01-30",
         "dateComplete": "2023-02-01",
@@ -28,13 +28,13 @@
     {
         "uid": 2003,
         "userUID": "102",
-        "dateDeadline": "2\/20\/23",
-        "dateCreate": "2023-02-08",
+        "dateDeadline": "2022-10-28",
+        "dateCreate": "2023-02-09",
         "dateComplete": "",
         "status": "XXXXX",
-        "title": "new",
-        "categories": "anthor",
-        "reward": "nothing",
+        "title": "another ",
+        "categories": "sdgsg",
+        "reward": "New ",
         "description": "its something alright",
         "timeNeeded": "20min"
     }
