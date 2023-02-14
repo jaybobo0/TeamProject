@@ -3,8 +3,7 @@
 <!-- Get User Names from UID -->
   <?php
 
-  
-  
+
   foreach ($tasksData as $item1) {
       foreach ($usersData as $item2) {
           if ($item1["userUID"] == $item2["uid"]) {
@@ -13,10 +12,21 @@
           }
       }
   }
+
+
+$categories = array();
+foreach ($result as $cat) {
+    $categories[] = $cat['categories'];
+}
+$uniqueCats = array_unique($categories);
+
+
+
+
   
-  // echo '<pre>';
-  // var_dump($result);
-  // echo '</pre>';
+  echo '<pre>';
+  var_dump($result);
+  echo '</pre>';
 
   ?>
 
@@ -45,7 +55,23 @@
                     <div class="m-4 m-lg-5">
                         <h1 class="display-5 fw-bold">Filter Tasks</h1>
                         <p class="fs-4">Form Goes Here</p>
-                        <a class="btn btn-primary btn-lg" href="#!">Filter</a>
+                        <form action="/redirects/search.php" method="post">
+                          
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+
+
+
+
+
+
+                          
+                          <input type="Submit" value="Search" class="btn btn-primary btn-lg" name="submit">
+                        </form>
                     </div>
                 </div>
             </div>
