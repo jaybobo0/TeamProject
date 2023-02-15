@@ -24,9 +24,9 @@ $uniqueCats = array_unique($categories);
 
 
   
-  echo '<pre>';
-  var_dump($uniqueCats);
-  echo '</pre>';
+  // echo '<pre>';
+  // var_dump($uniqueCats);
+  // echo '</pre>';
 
   ?>
 
