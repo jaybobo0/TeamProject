@@ -4,18 +4,9 @@
   <?php
 
 
-  foreach ($tasksData as $item1) {
-      foreach ($usersData as $item2) {
-          if ($item1["userUID"] == $item2["uid"]) {
-              unset($item2["uid"]);
-              $result[] = array_merge($item1, $item2);
-          }
-      }
-  }
-
 
 $categories = array();
-foreach ($result as $cat) {
+foreach ($mergedTaskUserData as $cat) {
     $categories[] = $cat['categories'];
 }
 $uniqueCats = array_unique($categories);
@@ -109,7 +100,7 @@ $uniqueCats = array_unique($categories);
                         </thead>
                         <tbody>
                                             <?php 
-                                              foreach($result as $key => $task){
+                                              foreach($mergedTaskUserData as $key => $task){
                                                 echo '<tr>
                                                         <th scope="row">1</th>
                                                         <td>'.$task['fName'].' '.$task['lName'].'</td>

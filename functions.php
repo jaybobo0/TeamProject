@@ -7,6 +7,24 @@
   $tasksData =  json_decode($jsonTasks, TRUE);   
   $usersData =  json_decode($jsonUsers, TRUE);  
 
+
+
+  //merge tasks and users
+  $mergedTaskUserData = array();
+  foreach ($tasksData as $item1) {
+      foreach ($usersData as $item2) {
+          if ($item1["userUID"] == $item2["uid"]) {
+              unset($item2["uid"]);
+              $mergedTaskUserData[] = array_merge($item1, $item2);
+          }
+      }
+  }
+
+  // echo '<pre>';
+  // var_dump($mergedTaskUserData);
+  // echo '</pre>';
+
+
 $cssFiles = 
   '
 <!-- Favicon-->
