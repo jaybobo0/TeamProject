@@ -69,7 +69,7 @@ $uniqueCats = array_unique($categories);
 
 
                           
-                          <input type="Submit" value="Search" class="btn btn-primary btn-lg" name="submit">
+                          <input type="Submit" value="Search" class="btn btn-primary btn-lg" name="btnSearch">
                         </form>
                     </div>
                 </div>
