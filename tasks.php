@@ -3,7 +3,15 @@
 <!-- Get User Names from UID -->
   <?php
 
+    if ($_GET['search'] = 'yes'){
+      $useableTaskData = $_SESSION['searchResult'];
+    } else {
+      $useableTaskData = $mergedTaskUserData;
+    }
 
+  // echo '<pre>';
+  // var_dump($_SESSION['searchResult']);
+  // echo '</pre>';
 
 $categories = array();
 foreach ($mergedTaskUserData as $cat) {
@@ -100,7 +108,7 @@ $uniqueCats = array_unique($categories);
                         </thead>
                         <tbody>
                                             <?php 
-                                              foreach($mergedTaskUserData as $key => $task){
+                                              foreach($useableTaskData as $key => $task){
                                                 echo '<tr>
                                                         <th scope="row">1</th>
                                                         <td>'.$task['fName'].' '.$task['lName'].'</td>
