@@ -2,8 +2,11 @@
 
 //see if button is pressed
 if (isset($_POST['btnSearch'])) {
-  
+    
   $searchResultsIndex = 0;
+  
+  //clear session 
+  $_SESSION['searchResult'] = [];
   
   //loop through json data
   foreach ($mergedTaskUserData as $key => $task) {
@@ -11,8 +14,8 @@ if (isset($_POST['btnSearch'])) {
     //filter out the data
     if($_POST['filterCategory'] == $task['categories']) {
 
-    //Build a session
-      $_SESSION['searchResult'][$searchResultsIndex] = [$task];
+      //Build a session
+      $_SESSION['searchResult'][$searchResultsIndex] = $task;
         
       $searchResultsIndex++;      
 
@@ -22,12 +25,13 @@ if (isset($_POST['btnSearch'])) {
     }
   }
   
+  // echo '<pre>';
+  // var_dump($_SESSION['searchResult']);
+  // echo '</pre>';
 
-
+  //send to user index.php
+  header('Location: /tasks.php?search=yes');
   
-  echo '<pre>';
-  var_dump($_SESSION['searchResult']);
-  echo '</pre>';
 
   }
   else
