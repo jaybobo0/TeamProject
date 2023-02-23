@@ -20,11 +20,9 @@ foreach ($mergedTaskUserData as $cat) {
 $uniqueCats = array_unique($categories);
 
 
-
-
   
   // echo '<pre>';
-  // var_dump($uniqueCats);
+  // var_dump($uniqueUsers);
   // echo '</pre>';
 
   ?>
@@ -57,12 +55,30 @@ $uniqueCats = array_unique($categories);
                         <form action="/redirects/search.php" method="post">
                           
                           <select class="form-select" aria-label="Default select example" name="filterCategory">
-                            <option selected>Open this select menu</option>
+                            <option selected>Choose a catagory</option>
 
                             <?php
 
                               foreach ($uniqueCats as $cat) {
                                 echo '<option value="'.$cat.'">'.$cat.'</option>';
+                              }
+
+
+                            ?>
+                            
+<!--                             <option value="1">One</option> -->
+                          </select>
+
+                          <br>
+
+                          
+                          <select class="form-select" aria-label="Default select example" name="filterUser">
+                            <option selected>Choose a user</option>
+
+                            <?php
+
+                              foreach ($usersData as $user) {
+                                echo '<option value="'.$user['uid'].'">'.$user['fName'].'</option>';
                               }
 
 
