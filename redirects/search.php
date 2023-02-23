@@ -25,18 +25,18 @@ if (isset($_POST['btnSearch'])) {
     }
   }
   
-  // echo '<pre>';
-  // var_dump($_SESSION['searchResult']);
-  // echo '</pre>';
+  echo '<pre>';
+  var_dump($_SESSION['searchResult']);
+  echo '</pre>';
 
-  //send to user index.php
-  header('Location: /tasks.php?search=yes');
+  // //send to user index.php
+  // header('Location: /tasks.php?search=yes');
   
 
-  }
-  else
-  {
-  // error
+  // }
+  // else
+  // {
+  // // error
 }
 
 

@@ -1,7 +1,7 @@
 [
     {
         "uid": 2001,
-        "userUID": 101,
+        "userUID": "101",
         "dateCreate": "2023-01-19",
         "dateDeadline": "2023-01-25",
         "dateComplete": "2023-01-22",
@@ -14,7 +14,7 @@
     },
     {
         "uid": 2002,
-        "userUID": 101,
+        "userUID": "101",
         "dateCreate": "2023-01-20",
         "dateDeadline": "2023-01-30",
         "dateComplete": "2023-02-01",
@@ -24,10 +24,10 @@
         "reward": 20.5,
         "timeNeeded": 130,
         "categories": "project"
-    },   
-  {
+    },
+    {
         "uid": 2002,
-        "userUID": 101,
+        "userUID": "101",
         "dateCreate": "2023-01-20",
         "dateDeadline": "2023-01-30",
         "dateComplete": "2023-02-01",
@@ -50,5 +50,31 @@
         "reward": "New ",
         "description": "its something alright",
         "timeNeeded": "20min"
+    },
+    {
+        "uid": 2004,
+        "userUID": "101",
+        "dateDeadline": "2024-06-22",
+        "dateCreate": "2023-02-21",
+        "dateComplete": "",
+        "status": "XXXXX",
+        "title": "new",
+        "categories": "project",
+        "reward": "nothing",
+        "description": "New ",
+        "timeNeeded": "765"
+    },
+    {
+        "uid": 2005,
+        "userUID": "103",
+        "dateDeadline": "2018-07-22",
+        "dateCreate": "2023-02-21",
+        "dateComplete": "",
+        "status": "XXXXX",
+        "title": "newfor billy",
+        "categories": "New ",
+        "reward": "HFEHQER",
+        "description": "wrtjwrtj",
+        "timeNeeded": "55"
     }
 ]
