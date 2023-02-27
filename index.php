@@ -1,10 +1,14 @@
 <?php /*1st Line on every webpage.*/ include $_SERVER['DOCUMENT_ROOT'].'/functions.php';
 
-$h = 0;
+$h = 0; // each home work
   
-$p = 0;
+$p = 0; //each project
   
-$i = 0;
+$i = 0; // each task
+
+$d = 0;
+
+$s = 0;// each task past due 604800
 foreach($tasksData as $task){
   
   if($task['categories'] == "home work" ){
@@ -17,7 +21,19 @@ foreach($tasksData as $task){
     
   }
 
+  if(strtotime($task['dateDeadline']) < strtotime(date("h:i:sa"))){
+    $d++;
+    
+  }
 
+    if(strtotime($task['dateDeadline']) < strtotime(date("h:i:sa")) + 604800 && strtotime($task['dateDeadline']) > strtotime(date("h:i:sa")) -1){
+    $s++;
+    
+  }
+
+  
+
+  $dateTest = $task['dateDeadline'];
   $i++;
 }
 
@@ -155,8 +171,9 @@ foreach($usersData as $users){
                         <div class="card bg-light border-0 h-100">
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-code"></i></div>
-                                <h2 class="fs-4 fw-bold">Simple clean code</h2>
-                                <p class="mb-0">We keep our dependencies up to date and squash bugs as they come!</p>
+                                <h2 class="fs-4 fw-bold">Tasks Past Deadlie</h2>
+                              <p class="mb-0">task past due: <?php echo $d; ?></p>
+                              <p class="mb-0">Due this week:<?php echo $s; ?> </p>
                             </div>
                         </div>
                     </div>
