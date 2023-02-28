@@ -9,28 +9,48 @@ $i = 0; // each task
 $d = 0;
 
 $s = 0;// each task past due 604800
-foreach($tasksData as $task){
+
+$sumOfRewards = 0;
+
+$sumOfRewardshealth = 0;
+
+$u =0;
   
-  if($task['categories'] == "home work" ){
+foreach($tasksData as $task){ // START:: loop through all task data
+                             
+                    
+$sumOfRewards = $sumOfRewards + $task['reward'];
+
+                             
+  if($task['categories'] == "home work" ){  // START:: count  health
+                                          
+    $sumOfRewardshealth = $sumOfRewardshealth = $task['reward'];
+                                          
     $h++;
     
-  }
+  }  // END:: count  health
   
   if($task['categories'] == "project" ){
     $p++;
     
   }
-
-  if(strtotime($task['dateDeadline']) < strtotime(date("h:i:sa"))){
-    $d++;
+                             
+  if($task['userUID'] == "103" ){
+    $u++;
     
   }
 
+  if(strtotime($task['dateDeadline']) < strtotime(date("h:i:sa"))){  // START:: time compare 
+    $d++;
+    
+  }
+  // end:: time  compare
     if(strtotime($task['dateDeadline']) < strtotime(date("h:i:sa")) + 604800 && strtotime($task['dateDeadline']) > strtotime(date("h:i:sa")) -1){
     $s++;
     
   }
 
+  
   
 
   $dateTest = $task['dateDeadline'];
@@ -155,6 +175,7 @@ foreach($usersData as $users){
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-card-heading"></i></div>
                                 <h2 class="fs-4 fw-bold">Category Counts</h2>
                                 <p class="mb-0">Counts:<?php echo $p; ?> </p>
+                                <p class="mb-0">RewardH: <?php echo $sumOfRewardshealth = $sumOfRewardshealth = $task['reward']; ?> </p>
                             </div>
                         </div>
                     </div>
@@ -181,8 +202,9 @@ foreach($usersData as $users){
                         <div class="card bg-light border-0 h-100">
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-patch-check"></i></div>
-                                <h2 class="fs-4 fw-bold">A name you trust</h2>
-                                <p class="mb-0">Start Bootstrap has been the leader in free Bootstrap templates since 2013!</p>
+                                <h2 class="fs-4 fw-bold">Rewards</h2>
+                                <p class="mb-0"> <?php echo $sumOfRewards ."<br>";?> </p>
+                                <p class="mb-0"> <?php echo "User103 Has ". $u.' Tasks' ."<br>";?> </p>
                             </div>
                         </div>
                     </div>

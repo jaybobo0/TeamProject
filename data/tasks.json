@@ -8,8 +8,8 @@
         "title": "Build To Do Project",
         "description": "You and a partner will develop a Phase One \"To-Do\" Task Management Application focusing on functionality over form. The app will use Bootstrap, HTML\/CSS, JavaScript, PHP, and JSON. ",
         "status": "created",
-        "reward": 1.5,
-        "timeNeeded": 120,
+        "reward": "1.5",
+        "timeNeeded": "120",
         "categories": "home work"
     },
     {
@@ -21,8 +21,8 @@
         "title": "Present To Class",
         "description": "Present your todo project To Class",
         "status": "created",
-        "reward": 20.5,
-        "timeNeeded": 130,
+        "reward": "20.5",
+        "timeNeeded": "130",
         "categories": "project"
     },
     {
@@ -34,8 +34,8 @@
         "title": "Present To Class",
         "description": "Present your todo project To Class",
         "status": "created",
-        "reward": 20.5,
-        "timeNeeded": 130,
+        "reward": "20.5",
+        "timeNeeded": "130",
         "categories": "popcorn"
     },
     {
@@ -47,7 +47,7 @@
         "status": "XXXXX",
         "title": "another ",
         "categories": "project",
-        "reward": "New ",
+        "reward": "3.5 ",
         "description": "its something alright",
         "timeNeeded": "20min"
     },
@@ -60,7 +60,7 @@
         "status": "XXXXX",
         "title": "new",
         "categories": "project",
-        "reward": "nothing",
+        "reward": "5.5",
         "description": "New ",
         "timeNeeded": "765"
     },
@@ -73,7 +73,7 @@
         "status": "XXXXX",
         "title": "newfor billy",
         "categories": "New ",
-        "reward": "HFEHQER",
+        "reward": "7.7",
         "description": "wrtjwrtj",
         "timeNeeded": "55"
     },
@@ -86,7 +86,7 @@
         "status": "XXXXX",
         "title": "Todd benurd",
         "categories": "project",
-        "reward": "asdasd",
+        "reward": "9.9",
         "description": "asdasd",
         "timeNeeded": "xzcxcz"
     },
@@ -99,7 +99,7 @@
         "status": "XXXXX",
         "title": "asdyas",
         "categories": "home work",
-        "reward": "asdasdas",
+        "reward": "10.1",
         "description": "adasdas",
         "timeNeeded": "dasda"
     },
@@ -112,20 +112,20 @@
         "status": "XXXXX",
         "title": "new task",
         "categories": "home work",
-        "reward": "nothing",
+        "reward": "5.2",
         "description": "its something alright",
         "timeNeeded": "556"
     },
     {
         "uid": 2009,
-        "userUID": "102",
+        "userUID": "103",
         "dateDeadline": "2025-07-24",
         "dateCreate": "2023-02-27",
         "dateComplete": "",
         "status": "XXXXX",
         "title": "new task ",
         "categories": "popcorn",
-        "reward": "HFEHQER",
+        "reward": "3.1",
         "description": "qeRHERH",
         "timeNeeded": "765"
     },
@@ -138,7 +138,7 @@
         "status": "XXXXX",
         "title": "newtask",
         "categories": "popcorn",
-        "reward": "nothing",
+        "reward": "5.6",
         "description": "qeRHERH",
         "timeNeeded": "765"
     }
