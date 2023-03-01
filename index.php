@@ -14,7 +14,7 @@ $sumOfRewards = 0;
 
 $sumOfRewardshealth = 0;
 
-$u =0;
+$u =0; //each task from a user
   
 foreach($tasksData as $task){ // START:: loop through all task data
                              
