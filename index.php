@@ -10,7 +10,7 @@ $p = 0; //each project
   
 $i = 0; // each task
 
-$d = 0;
+$d = 0; 
 
 $s = 0;// each task past due 604800
 
