@@ -1,5 +1,9 @@
 <?php /*1st Line on every webpage.*/ include $_SERVER['DOCUMENT_ROOT'].'/functions.php';
 
+
+
+$useUserUid = $o;
+
 $h = 0; // each home work
   
 $p = 0; //each project
@@ -35,7 +39,7 @@ $sumOfRewards = $sumOfRewards + $task['reward'];
     
   }
                              
-  if($task['userUID'] == "103" ){
+  if($task['userUID'] == $selectedUser ){
     $u++;
     
   }
@@ -204,7 +208,39 @@ foreach($usersData as $users){
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-patch-check"></i></div>
                                 <h2 class="fs-4 fw-bold">Rewards</h2>
                                 <p class="mb-0"> <?php echo $sumOfRewards ."<br>";?> </p>
-                                <p class="mb-0"> <?php echo "User103 Has ". $u.' Tasks' ."<br>";?> </p>
+
+
+                                  <form method="get">
+                                		<label for="selectOption">Select an Option:</label>
+                                		<select name="selectOption" id="selectOption">
+                                			<option value="todd">todd 1</option>
+                                			<option value="billy">billy 2</option>
+                                			<option value="jhon">Option 3</option>
+                                		</select>
+                                		<button type="submit">Submit</button>
+                                	</form>
+                                
+                                	<?php 
+                                		// Check if the form has been submitted
+                                		if (isset($_GET["selectOption"])) {
+                                			// Get the selected option value
+                                			$selectedOption = $_GET["selectOption"];
+                                
+                                			// Set the variable based on the selected option
+                                			if ($selectedOption == "todd") {
+                                				$selectedUser = 101;
+                                			} elseif ($selectedOption == "billy") {
+                                				$selectedUser = 103;
+                                			} elseif ($selectedOption == "jhon") {
+                                				$selectedUser = 102;
+                                			} else {
+                                				$selectedUser = 0;
+                                			} }
+                                
+                                			// Output the variable value
+                                			echo "<p>Selected option: " . $selectedUser . "</p>"; ?>
+                              
+                                <p class="mb-0"> <?php echo "User ".$selectedUser." Has ". $u.' Tasks' ."<br>";?> </p>
                             </div>
                         </div>
                     </div>
