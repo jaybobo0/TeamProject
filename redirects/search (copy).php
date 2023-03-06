@@ -4,12 +4,12 @@
   $_SESSION = array();
   
   //is button pressed?
-  if(isset($_POST['BTN_search'])) {
+  if(isset($_POST['btnSearch'])) {
     
     if($_POST['filterCategory'] == 'none' && $_POST['filterUse'] == 'none' ) {
 
       // process if NO filter is selected.
-      header('Location: /tasks/index.php');
+      header('Location: /index.php');
       exit(); //ends the php script.
       
     } elseif ($_POST['filterCategory'] != 'none'&& $_POST['filterUser'] == 'none' ) {
