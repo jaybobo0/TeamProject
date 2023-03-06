@@ -24,6 +24,14 @@
   // var_dump($mergedTaskUserData);
   // echo '</pre>';
 
+//sort array based on reward #
+function sortByReward($a,$b){
+  if ($a['reward'] == $b['reward']){
+    return 0;
+  }
+  return ($a['reward'] < $b['reward']) ? 1 : -1; // 1 if true -1 if false
+}
+
 
 $cssFiles = 
   '

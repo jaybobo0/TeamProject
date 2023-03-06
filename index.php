@@ -66,6 +66,20 @@ foreach($usersData as $users){
   $totalUsers++;
 }
 
+//clones mergedTaskUserData
+$sortedTaskUserData = $mergedTaskUserData;
+usort($sortedTaskUserData, 'sortByReward');
+
+
+$topThreeRewards = [];
+
+$x=0;
+while($x <= 2) {
+  // echo $sortedTaskUserData[$x]['reward'] . '<br>';
+  $topThreeRewards[$x] = $sortedTaskUserData[$x];
+  
+ $x++;
+ }
 
 
 ?>
@@ -106,7 +120,7 @@ foreach($usersData as $users){
                             <input type="text" class="form-control" name="reward" >
                           </div>
                           <div class="col-6">
-                            <label  class="form-label">Date</label>
+                            <label  class="form-label">Due Date</label>
                               <br>
                               <input type="date" id="start" class="form-control" name="dateDeadline"
                                      value="2018-07-22"
@@ -135,7 +149,7 @@ foreach($usersData as $users){
                           </div>
                          
                           <div class="col-12">
-                            <label  class="form-label">TimeNeeded</label>
+                            <label  class="form-label">TimeNeeded in minutes</label>
                             <input type="text" class="form-control" name="timeNeeded">
                           </div>
                           <div class="col-12">
@@ -189,6 +203,17 @@ foreach($usersData as $users){
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-bootstrap"></i></div>
                                 <h2 class="fs-4 fw-bold">Homework count</h2>
                                 <p class="mb-0">Counts:<?php echo $h; ?> </p>
+                              
+                                <p> 
+                                <?php
+                                $rewardNumb = 1;
+                                foreach($topThreeRewards as $reward){
+                                  echo 'reward number ' . $rewardNumb . ': ' . $reward['reward'] . '<br>';
+                                  $rewardNumb++;
+                                } 
+                                ?> 
+                                </p>
+                              
                             </div>
                         </div>
                     </div>
