@@ -120,18 +120,20 @@ $uniqueCats = array_unique($categories);
                             <th scope="col">Due Date</th>
                             <th scope="col">Title</th>
                             <th scope="col">Value</th>
+                            <th scope="col">Status</th>
                           </tr>
                         </thead>
                         <tbody>
                                             <?php 
-                                              foreach($useableTaskData as $key => $task){
+                                              foreach($mergedTaskUserData as $key => $task){
                                                 echo '<tr>
                                                         <th scope="row">1</th>
                                                         <td>'.$task['fName'].' '.$task['lName'].'</td>
                                                           <td>'.$task['categories'].'</td>
                                                         <td>'.$task['dateDeadline'].'</td>
                                                         <td>'.$task['title'].'</td>
-                                                        <td>Value</td>
+                                                        <td>'.$task['reward'].'</td>
+                                                        // <td><a href="/redirects/status.php?uid='.$task['uid'].'">'.$task['status'].'</a></td>
                                                       </tr>';
                                               }
                                               
