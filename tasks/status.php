@@ -1,4 +1,11 @@
-<?php /*1st Line on every webpage.*/ include $_SERVER['DOCUMENT_ROOT'].'/functions.php'; ?>
+<?php /*1st Line on every webpage.*/ include $_SERVER['DOCUMENT_ROOT'].'/functions.php'; 
+
+
+echo '<pre>';
+var_dump($_SESSION['statusUpdate']);
+echo '</pre>';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
