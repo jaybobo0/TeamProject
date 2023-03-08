@@ -34,16 +34,6 @@ $newFormData = array(
 array_push($tasksData, $newFormData);
 //encode tasksData back into json
 $tasksDataAsJSON = json_encode($tasksData, JSON_PRETTY_PRINT);
-
-
-
-
-
-//encho out taksData
-  // echo '<pre>';
-  // var_dump($tasksDataAsJSON);
-  // echo '</pre>';
-
 //put the data into json
 file_put_contents($_SERVER['DOCUMENT_ROOT'].'/data/tasks.json', $tasksDataAsJSON);
 
