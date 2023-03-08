@@ -28,13 +28,13 @@
                         <form action="" method="post">
                           <label>Update Status</label>
                           <br>
-                          <select>
-                            <option value="0">hatooy</option>
-                            <option value="0">habluey</option>
-                            <option value="0">hablgueeuey</option>
+                          <select naem="statusOption">
+                            <option value="0">Choose a status</option>
+                            <option value="completed">completed</option>
+                            <option value="canceled">canceled</option>
                           </select>
 
-                          <input class="btn btn-primary btn-lg" type="submit" value="submit" name="BTNstatus" action="/redirects/status.php"/>
+                          <button type="submit" formaction="/redirects/status.php">Submit to another page</button>
                         
 
                         </form>
