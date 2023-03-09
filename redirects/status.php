@@ -1,44 +1,53 @@
 <?php /*1st Line on every webpage.*/ include $_SERVER['DOCUMENT_ROOT'].'/functions.php'; 
 
 if (isset($_GET['uid'])) {
-   foreach($mergedTaskUserData as $task) { //foreach start
+   foreach($mergedTaskUserData as $task) 
+   { //foreach start
   if ($task['uid'] == $_GET['uid']){ //if start
     $_SESSION['statusUpdate'] = $task;
   }//if end
  
 }//foreach end
 
-// header('Location: /tasks/status.php');
+header('Location: /tasks/status.php');
   
-} else if (isset($_POST['BTNstatus'])){ //else if start
-  $indexNumber = 0;
-   foreach($tasksData as $task){ //foreach start
-    
-    if ($task['uid'] == $_SESSION['statusUpdate']['uid']){ //if start
+  } elseif (isset($_POST['btnEdit'])) {
 
-      $taskData[$indexNumber]['status'] = $_POST['statusUpdate'];
-       $indexNumber++;
-        //encode tasksData back into json
-        $tasksDataAsJSON = json_encode($tasksData, JSON_PRETTY_PRINT);
-        //put the data into json
-        file_put_contents($_SERVER['DOCUMENT_ROOT'].'/data/tasks.json', $tasksDataAsJSON);
-      
-    } //if end
-   } //foreach end 
+    if($_POST['statusUpdate'] == "0"){
+       header('Location: /index.php');
+    } else {
+      // echo $_POST['statusUpdate'];
+
+
+      $indexNumber = 0;
+      foreach($tasksData as $task){ // start foreach
+        if($task['uid'] == $_SESSION['statusUpdate']['uid']){ // start if
+
+          $tasksData[$indexNumber]["status"] = $_POST['statusUpdate'];
+                                                             
+          //encode tasksData back into json
+          $tasksDataAsJSON = json_encode($tasksData, JSON_PRETTY_PRINT);
+          //put the contents
+          file_put_contents($_SERVER['DOCUMENT_ROOT'].'/data/tasks.json', $tasksDataAsJSON);
+          //redirect
+          header('Location: /index.php');
+                                              
+        } //end if
+
+        $indexNumber++;
+                                 
+      } // end foreach
      
-} //else if start end 
-else {
-  echo 'wy are you here >:(';
-
+    } // end else
+   
+  } else {
  
+    echo "why are you here >:(";
   }
 
 
-
-
-// echo '<pre>';
-// var_dump($_SESSION['statusUpdate']);
-// echo '</pre>';
-
-
+  // echo '<pre>';
+  // var_dump($taskData);
+  // echo '</pre>';
+ 
 ?>

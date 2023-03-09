@@ -25,7 +25,7 @@
                 <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
                     <div class="m-4 m-lg-5">
                         <h1 class="display-5 fw-bold">Edit Status</h1>
-                        <form action="" method="post">
+                        <form action="post" method="post">
                           <label>Update Status</label>
                           <br>
                           <select naem="statusOption">
@@ -34,7 +34,7 @@
                             <option value="canceled">canceled</option>
                           </select>
 
-                          <button type="submit" formaction="/redirects/status.php">Submit to another page</button>
+                          <button type="submit" name="btnEdit" formaction="/redirects/status.php">Submit to another page</button>
                         
 
                         </form>
